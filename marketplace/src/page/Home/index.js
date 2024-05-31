@@ -1,6 +1,14 @@
+import { Link } from 'react-router-dom';
+
 const Home = () =>{
     return (
-        <h1>HomePage</h1>
+        <div>
+            <h1>HomePage</h1>
+            <a href="/login">VÁ PARA LOGIN</a>
+            <br/>
+            <Link to='/login'>VÁ PARA LOGIN COM LINK</Link>
+        </div>
+        
     )
 }
 
