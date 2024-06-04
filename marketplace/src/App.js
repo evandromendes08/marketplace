@@ -5,6 +5,7 @@ import Login from './page/Login';
 //import NavMenu from './components/NavMenu';
 import Products from './page/Products';
 import Product from './page/Product';
+import NotFound from './page/NotFound';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/products' element={<Products/>}/>
         <Route path='/product/:id' element={<Product/>}/>
+        <Route path='/*' element={<NotFound/>}/>
         </Routes>
   );
 }

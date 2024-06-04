@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import './style.css';
 
 const Products = () => {
+
+    const [searchParams, setSearchParams] = useSearchParams()
+
     return(
         <div>
             <h2>Lista de Produtos</h2>
             <p>Abaixo Lista de Produtos</p>
+
+            <p>Página: {searchParams.get('page')}</p>
             <Link to="/product">Link para o produto</Link>
             <br/>
             <Link to="/product/1">Link para o produto 1</Link>
@@ -13,6 +19,13 @@ const Products = () => {
             <br/>
             <Link to="/product/3">Link para o produto 3</Link>
             <br/>
+
+            <ul className="pagination">
+                <li><button onClick={() => setSearchParams({page:1})}>1</button></li>
+                <li><button onClick={() => setSearchParams({page:2})}>2</button></li>
+                <li><button onClick={() => setSearchParams({page:3})}>3</button></li>
+                <li><button onClick={() => setSearchParams({page:4})}>4</button></li>
+            </ul>
         </div>
     )
 }
