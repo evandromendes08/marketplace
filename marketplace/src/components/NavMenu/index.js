@@ -15,6 +15,9 @@ const NavMenu = () => {
                 <li>
                     <Link to='/products'>Products</Link>
                 </li>
+                <li>
+                    <Link to='/registro'>Registro</Link>
+                </li>
             </ul>
         </nav>
     )

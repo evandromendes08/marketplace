@@ -13,6 +13,8 @@ const Products = () => {
             <p>Página: {searchParams.get('page')}</p>
             <Link to="/product">Link para o produto</Link>
             <br/>
+            <Link to="/product/1/reviews">Link para os Reviews</Link>
+            <br/>
             <Link to="/product/1">Link para o produto 1</Link>
             <br/>
             <Link to="/product/2">Link para o produto 2</Link>

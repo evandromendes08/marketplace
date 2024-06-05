@@ -6,6 +6,8 @@ import Login from './page/Login';
 import Products from './page/Products';
 import Product from './page/Product';
 import NotFound from './page/NotFound';
+import Registro from './page/Registro';
+import ProductReviews from './page/ProductReviews';
 
 function App() {
   return (
@@ -13,7 +15,10 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/products' element={<Products/>}/>
-        <Route path='/product/:id' element={<Product/>}/>
+        <Route path='/product/:id' element={<Product/>}>
+          <Route path='reviews' element={<ProductReviews/>}/>  {/* //ROTA ACIMA FILHA DO PRODUCT/ */} 
+        </Route> 
+        <Route path='/registro' element={<Registro/>}/>
         <Route path='/*' element={<NotFound/>}/>
         </Routes>
   );
